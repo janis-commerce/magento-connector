@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Util;
+namespace JanisCommerce\MagentoConnector\Util;
 
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Serialize\Serializer\Json;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Model\DataMappers\OrderCreationNotification;
+namespace JanisCommerce\MagentoConnector\Model\DataMappers\OrderCreationNotification;
 
 
 use Janis\JanisConnector\Helper\Data;

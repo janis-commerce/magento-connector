@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Logger;
+namespace JanisCommerce\MagentoConnector\Logger;
 
 use Magento\Framework\Logger\Handler\Base;
 

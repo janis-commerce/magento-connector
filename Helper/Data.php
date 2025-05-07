@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Helper;
+namespace JanisCommerce\MagentoConnector\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Model;
+namespace JanisCommerce\MagentoConnector\Model;
 
 use Janis\JanisConnector\Model\JanisCartService;
 use Janis\JanisConnector\Api\ReloadPdpCalendarDataInterface;

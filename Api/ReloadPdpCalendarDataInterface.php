@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Janis\JanisConnector\Api;
+namespace JanisCommerce\MagentoConnector\Api;
 
 interface ReloadPdpCalendarDataInterface
 {

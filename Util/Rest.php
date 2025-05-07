@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Util;
+namespace JanisCommerce\MagentoConnector\Util;
 
 
 use Magento\Framework\HTTP\ZendClientFactory;

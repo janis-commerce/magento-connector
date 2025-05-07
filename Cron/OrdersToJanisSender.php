@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Cron;
+namespace JanisCommerce\MagentoConnector\Cron;
 
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 use Janis\JanisConnector\Model\JanisOrderService;

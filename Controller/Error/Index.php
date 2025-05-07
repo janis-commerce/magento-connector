@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Controller\Error;
+namespace JanisCommerce\MagentoConnector\Controller\Error;
 
 use Magento\Framework\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;

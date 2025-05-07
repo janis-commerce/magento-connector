@@ -7,7 +7,7 @@
 		<section id="janis_connection_section" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
 			<label>Configuration</label>
 			<tab>janis</tab>
-			<resource>JanisCommerce_Connector::config_JanisCommerce_Connector</resource>
+			<resource>JanisCommerce_MagentoConnector::config_JanisCommerce_MagentoConnector</resource>
 			<group id="janis_connection_group" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
 				<label>Configuration</label>
 

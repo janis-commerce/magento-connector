@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Model\DataMappers;
+namespace JanisCommerce\MagentoConnector\Model\DataMappers;
 
 abstract class AbstractAttributeMapper
 {

@@ -38,7 +38,7 @@ Once JanisConnector was installed, you need to enable the module. To do this, ru
 
     bin/magento cache:clean
 
-    bin/magento module:enable JanisCommerce_connector
+    bin/magento module:enable JanisCommerce_MagentoConnector
 
     bin/magento setup:upgrade
 

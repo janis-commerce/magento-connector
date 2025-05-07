@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Setup\Patch\Data;
+namespace JanisCommerce\MagentoConnector\Setup\Patch\Data;
 
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;

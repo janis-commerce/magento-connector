@@ -1,6 +1,6 @@
 <?php
 
-namespace Janis\JanisConnector\Model;
+namespace JanisCommerce\MagentoConnector\Model;
 
 use Janis\JanisConnector\Helper\Data;
 use Janis\JanisConnector\Logger\JanisConnectorLogger;
