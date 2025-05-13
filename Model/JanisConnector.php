@@ -2,12 +2,12 @@
 
 namespace JanisCommerce\MagentoConnector\Model;
 
-use Janis\JanisConnector\Helper\Data;
-use Janis\JanisConnector\Logger\JanisConnectorLogger;
-use Janis\JanisConnector\Util\Rest;
+use JanisCommerce\MagentoConnector\Helper\Data;
+use JanisCommerce\MagentoConnector\Logger\MagentoConnectorLogger;
+use JanisCommerce\MagentoConnector\Util\Rest;
 
 
-abstract class JanisConnector
+abstract class MagentoConnector
 {
     /**
      * @var Rest
@@ -29,32 +29,32 @@ abstract class JanisConnector
      */
     private $responseFactory;
     /**
-     * @var JanisConnectorLogger
+     * @var MagentoConnectorLogger
      */
-    private $janisConnectorLogger;
+    private $MagentoConnectorLogger;
 
 
     /**
-     * JanisConnector constructor.
+     * MagentoConnector constructor.
      * @param Rest $rest
      * @param Data $helperData
      * @param \Magento\Framework\UrlInterface $url
      * @param \Magento\Framework\App\ResponseFactory $responseFactory
-     * @param JanisConnectorLogger $janisConnectorLogger
+     * @param MagentoConnectorLogger $MagentoConnectorLogger
      */
     public function __construct(
         Rest $rest,
         Data $helperData,
         \Magento\Framework\UrlInterface $url,
         \Magento\Framework\App\ResponseFactory $responseFactory,
-        JanisConnectorLogger $janisConnectorLogger
+        MagentoConnectorLogger $MagentoConnectorLogger
     )
     {
         $this->rest = $rest;
         $this->helperData = $helperData;
         $this->url = $url;
         $this->responseFactory = $responseFactory;
-        $this->janisConnectorLogger = $janisConnectorLogger;
+        $this->MagentoConnectorLogger = $MagentoConnectorLogger;
     }
 
     /**
@@ -90,11 +90,11 @@ abstract class JanisConnector
     {
         try{
             $response = $this->rest->request($endpoint, 'POST', $params);
-            $this->janisConnectorLogger->info('Endpoint URL: ' . $endpoint);
-            //$this->janisConnectorLogger->info('Body Payload sended: ' . print_r(json_decode($params), true));
-            $this->janisConnectorLogger->info('Body Payload sended: ' . $params);
+            $this->MagentoConnectorLogger->info('Endpoint URL: ' . $endpoint);
+            //$this->MagentoConnectorLogger->info('Body Payload sended: ' . print_r(json_decode($params), true));
+            $this->MagentoConnectorLogger->info('Body Payload sended: ' . $params);
             $this->checkResponseStatus($this->rest->getStatus());
-            $this->janisConnectorLogger->info("Response payload: " . json_encode($response));
+            $this->MagentoConnectorLogger->info("Response payload: " . json_encode($response));
 
             return $response;
         }
@@ -115,7 +115,7 @@ abstract class JanisConnector
         }
         else
         {
-            $this->janisConnectorLogger->info('Connection status: '. $statusCode);
+            $this->MagentoConnectorLogger->info('Connection status: '. $statusCode);
         }
     }
 
@@ -128,7 +128,7 @@ abstract class JanisConnector
     {
         $CustomRedirectionUrl = $this->url->getUrl('janis/error/index');
         $this->responseFactory->create()->setRedirect($CustomRedirectionUrl)->sendResponse();
-        $this->janisConnectorLogger->info('Connection Error: '. $statusCode);
+        $this->MagentoConnectorLogger->info('Connection Error: '. $statusCode);
         exit();
     }
 }

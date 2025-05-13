@@ -6,7 +6,7 @@ namespace JanisCommerce\MagentoConnector\Util;
 use Magento\Framework\HTTP\ZendClientFactory;
 use Magento\Framework\Serialize\Serializer\Json;
 use Magento\Framework\HTTP\Client\Curl;
-use Janis\JanisConnector\Helper\Data;
+use JanisCommerce\MagentoConnector\Helper\Data;
 
 class Rest extends Api
 {

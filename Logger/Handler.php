@@ -11,7 +11,7 @@ class Handler extends Base
      * @SuppressWarnings(PHPMD.BooleanGetMethodName)
      * @var int
      */
-    protected $loggerType = JanisConnectorLogger::INFO;
+    protected $loggerType = MagentoConnectorLogger::INFO;
 
     /**
      * File name.

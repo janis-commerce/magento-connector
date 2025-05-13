@@ -2,20 +2,20 @@
 
 namespace JanisCommerce\MagentoConnector\Model;
 
-use Janis\JanisConnector\Helper\Data;
-use Janis\JanisConnector\Logger\JanisConnectorLogger;
-use Janis\JanisConnector\Util\Rest;
+use JanisCommerce\MagentoConnector\Helper\Data;
+use JanisCommerce\MagentoConnector\Logger\MagentoConnectorLogger;
+use JanisCommerce\MagentoConnector\Util\Rest;
 
-class JanisCartService extends JanisConnector
+class JanisCartService extends MagentoConnector
 {
     /**
      * @var Data
      */
     private $helper;
     /**
-     * @var JanisConnectorLogger
+     * @var MagentoConnectorLogger
      */
-    private $janisConnectorLogger;
+    private $MagentoConnectorLogger;
     /**
      * @var \Magento\Catalog\Model\ProductFactory
      */
@@ -39,7 +39,7 @@ class JanisCartService extends JanisConnector
      * @param Data $helper
      * @param \Magento\Framework\Controller\Result\RedirectFactory $resultRedirectFactory
      * @param \Magento\Backend\Model\View\Result\Redirect $redirect
-     * @param JanisConnectorLogger $janisConnectorLogger
+     * @param MagentoConnectorLogger $MagentoConnectorLogger
      * @param \Magento\Catalog\Model\ProductFactory $product
      * @param \Magento\Catalog\Model\ProductRepository $productRepository
      * @param \Magento\Quote\Model\Quote\ItemFactory $quoteItemFactory
@@ -52,7 +52,7 @@ class JanisCartService extends JanisConnector
         Data $helper,
         \Magento\Framework\Controller\Result\RedirectFactory $resultRedirectFactory,
         \Magento\Backend\Model\View\Result\Redirect $redirect,
-        JanisConnectorLogger $janisConnectorLogger,
+        MagentoConnectorLogger $MagentoConnectorLogger,
         \Magento\Catalog\Model\ProductFactory $product,
         \Magento\Catalog\Model\ProductRepository $productRepository,
         \Magento\Quote\Model\Quote\ItemFactory $quoteItemFactory,
@@ -61,9 +61,9 @@ class JanisCartService extends JanisConnector
         \Magento\Framework\App\ResponseFactory $responseFactory
     )
     {
-        parent::__construct($rest, $helper, $url, $responseFactory, $janisConnectorLogger);
+        parent::__construct($rest, $helper, $url, $responseFactory, $MagentoConnectorLogger);
         $this->helper = $helper;
-        $this->janisConnectorLogger = $janisConnectorLogger;
+        $this->MagentoConnectorLogger = $MagentoConnectorLogger;
         $this->product = $product;
         $this->productRepository = $productRepository;
         $this->quoteItemFactory = $quoteItemFactory;
@@ -119,7 +119,7 @@ class JanisCartService extends JanisConnector
         $dropoff['long'] = (float) $dropoff['long'];
 
 
-        $this->janisConnectorLogger->info('*************** Splitcart Resquest ***************');
+        $this->MagentoConnectorLogger->info('*************** Splitcart Resquest ***************');
         $body = $this->buildQuoteBodySplitCarts($cart, $shippingType, $dropoff, $customSkus, $indexShipping);
 
         $response = $this->post(

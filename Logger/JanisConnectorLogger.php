@@ -2,6 +2,6 @@
 
 namespace JanisCommerce\MagentoConnector\Logger;
 
-class JanisConnectorLogger extends \Monolog\Logger
+class MagentoConnectorLogger extends \Monolog\Logger
 {
 }

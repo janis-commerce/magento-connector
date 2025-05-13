@@ -2,21 +2,21 @@
 
 namespace JanisCommerce\MagentoConnector\Model;
 
-use Janis\JanisConnector\Logger\JanisConnectorLogger;
-use Janis\JanisConnector\Helper\Data;
-use Janis\JanisConnector\Model\DataMappers\OrderCreationNotification\OrderNotification;
-use Janis\JanisConnector\Util\Rest;
+use JanisCommerce\MagentoConnector\Logger\MagentoConnectorLogger;
+use JanisCommerce\MagentoConnector\Helper\Data;
+use JanisCommerce\MagentoConnector\Model\DataMappers\OrderCreationNotification\OrderNotification;
+use JanisCommerce\MagentoConnector\Util\Rest;
 
-class JanisOrderService extends JanisConnector
+class JanisOrderService extends MagentoConnector
 {
     /**
      * @var Data
      */
     private $helper;
     /**
-     * @var JanisConnectorLogger
+     * @var MagentoConnectorLogger
      */
-    private $janisConnectorLogger;
+    private $MagentoConnectorLogger;
     /**
      * @var OrderNotification
      */
@@ -32,7 +32,7 @@ class JanisOrderService extends JanisConnector
      * @param Data $helper
      * @param OrderNotification $orderNotification
      * @param OrderCommentManager $orderCommentManager
-     * @param JanisConnectorLogger $janisConnectorLogger
+     * @param MagentoConnectorLogger $MagentoConnectorLogger
      */
     public function __construct(
         Rest $rest,
@@ -41,14 +41,14 @@ class JanisOrderService extends JanisConnector
         \Magento\Framework\App\ResponseFactory $responseFactory,
         OrderNotification $orderNotification,
         OrderCommentManager $orderCommentManager,
-        JanisConnectorLogger $janisConnectorLogger
+        MagentoConnectorLogger $MagentoConnectorLogger
     )
     {
         $this->helper = $helper;
-        $this->janisConnectorLogger = $janisConnectorLogger;
+        $this->MagentoConnectorLogger = $MagentoConnectorLogger;
         $this->orderNotification = $orderNotification;
         $this->orderCommentManager = $orderCommentManager;
-        parent::__construct($rest, $helper, $url, $responseFactory, $janisConnectorLogger);
+        parent::__construct($rest, $helper, $url, $responseFactory, $MagentoConnectorLogger);
     }
 
     /**
@@ -62,8 +62,8 @@ class JanisOrderService extends JanisConnector
         // Getting create order payload
         $payload = $this->orderNotification->builtPayload(true);
 
-        $this->janisConnectorLogger->info('*************** Order Notification ***************');
-        $this->janisConnectorLogger->info('Order id: ' . $saleOrder->getId() .' sended.');
+        $this->MagentoConnectorLogger->info('*************** Order Notification ***************');
+        $this->MagentoConnectorLogger->info('Order id: ' . $saleOrder->getId() .' sended.');
 
         $response = $this->post(
             $this->helper->getJanisEndpointToNotifyNewOrder(),

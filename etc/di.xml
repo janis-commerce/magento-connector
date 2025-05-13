@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Janis\JanisConnector\Api\ReloadPdpCalendarDataInterface" type="Janis\JanisConnector\Model\ReloadPdpCalendarData"/>
+    <preference for="JanisCommerce\MagentoConnector\Api\ReloadPdpCalendarDataInterface" type="JanisCommerce\MagentoConnector\Model\ReloadPdpCalendarData"/>
     <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
         <arguments>
             <argument name="columns" xsi:type="array">
@@ -9,11 +9,11 @@
         </arguments>
     </virtualType>
 
-    <type name="Janis\JanisConnector\Logger\JanisConnectorLogger">
+    <type name="JanisCommerce\MagentoConnector\Logger\MagentoConnectorLogger">
         <arguments>
-            <argument name="name" xsi:type="string">janisconnector</argument>
+            <argument name="name" xsi:type="string">MagentoConnector</argument>
             <argument name="handlers"  xsi:type="array">
-                <item name="system" xsi:type="object">Janis\JanisConnector\Logger\Handler</item>
+                <item name="system" xsi:type="object">JanisCommerce\MagentoConnector\Logger\Handler</item>
             </argument>
         </arguments>
     </type>

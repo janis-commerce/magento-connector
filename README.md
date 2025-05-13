@@ -24,7 +24,7 @@ To install this module, just run the following command line:
 composer require janis-commerce/magento-connector
 ```
 
-For more information about JanisConnector via composer installation, follow us:
+For more information about MagentoConnector via composer installation, follow us:
 
 ```bash
 https://packagist.org/packages/janis-commerce/magento-connector
@@ -32,7 +32,7 @@ https://packagist.org/packages/janis-commerce/magento-connector
 
 ### Enable module
 
-Once JanisConnector was installed, you need to enable the module. To do this, run the following next command lines over a magento project
+Once MagentoConnector was installed, you need to enable the module. To do this, run the following next command lines over a magento project
 
 ```bash
 
@@ -143,7 +143,7 @@ https://<my_domain>/rest/default/V1/split-cart
 There are two format options to allow Client, to request information:
 
 #### 1) Client Body format to allow the module to use quote items to build request
-With this body format, JanisConnector add all items located in the cart, and sent them to get the splitcart payload.
+With this body format, MagentoConnector add all items located in the cart, and sent them to get the splitcart payload.
 
 ```bash
 {
@@ -170,7 +170,7 @@ Also it is possible to add custom products, including **"skus"** field as is sho
 }
 ```
 
-Internally with those types of client requests, JanisConnector will build and send a body payload to a configurable Janis End Point, created with this format:
+Internally with those types of client requests, MagentoConnector will build and send a body payload to a configurable Janis End Point, created with this format:
 
 ```bash
 {
@@ -425,7 +425,7 @@ Janis payload response:
 ```
 # Usage examples
 
-There is a wide variety of uses that could be given to the functionalities provided by JanisConnector, among some we present:
+There is a wide variety of uses that could be given to the functionalities provided by MagentoConnector, among some we present:
 
 ### 1) Splitcart
 A visual representation of the use of the splitcart would be the following:

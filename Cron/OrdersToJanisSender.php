@@ -3,7 +3,7 @@
 namespace JanisCommerce\MagentoConnector\Cron;
 
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
-use Janis\JanisConnector\Model\JanisOrderService;
+use JanisCommerce\MagentoConnector\Model\JanisOrderService;
 
 class OrdersToJanisSender
 {
