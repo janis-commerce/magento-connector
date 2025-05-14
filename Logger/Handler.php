@@ -1,6 +1,6 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Logger;
+namespace JanisCommerce\JanisConnector\Logger;
 
 use Magento\Framework\Logger\Handler\Base;
 
@@ -11,7 +11,7 @@ class Handler extends Base
      * @SuppressWarnings(PHPMD.BooleanGetMethodName)
      * @var int
      */
-    protected $loggerType = MagentoConnectorLogger::INFO;
+    protected $loggerType = JanisConnectorLogger::INFO;
 
     /**
      * File name.

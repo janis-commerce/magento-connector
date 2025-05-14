@@ -1,9 +1,9 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Cron;
+namespace JanisCommerce\JanisConnector\Cron;
 
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
-use JanisCommerce\MagentoConnector\Model\JanisOrderService;
+use JanisCommerce\JanisConnector\Model\JanisOrderService;
 
 class OrdersToJanisSender
 {

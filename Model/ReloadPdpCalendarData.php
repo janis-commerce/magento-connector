@@ -1,9 +1,9 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Model;
+namespace JanisCommerce\JanisConnector\Model;
 
-use JanisCommerce\MagentoConnector\Model\JanisCartService;
-use JanisCommerce\MagentoConnector\Api\ReloadPdpCalendarDataInterface;
+use JanisCommerce\JanisConnector\Model\JanisCartService;
+use JanisCommerce\JanisConnector\Api\ReloadPdpCalendarDataInterface;
 
 class ReloadPdpCalendarData implements ReloadPdpCalendarDataInterface
 {

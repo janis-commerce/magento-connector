@@ -1,7 +1,7 @@
 <?php
 
 
-namespace JanisCommerce\MagentoConnector\Model;
+namespace JanisCommerce\JanisConnector\Model;
 
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Sales\Model\Order\Status\HistoryFactory;

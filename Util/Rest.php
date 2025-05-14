@@ -1,12 +1,12 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Util;
+namespace JanisCommerce\JanisConnector\Util;
 
 
 use Magento\Framework\HTTP\ZendClientFactory;
 use Magento\Framework\Serialize\Serializer\Json;
 use Magento\Framework\HTTP\Client\Curl;
-use JanisCommerce\MagentoConnector\Helper\Data;
+use JanisCommerce\JanisConnector\Helper\Data;
 
 class Rest extends Api
 {

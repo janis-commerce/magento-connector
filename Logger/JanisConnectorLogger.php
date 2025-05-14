@@ -1,7 +1,7 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Logger;
+namespace JanisCommerce\JanisConnector\Logger;
 
-class MagentoConnectorLogger extends \Monolog\Logger
+class JanisConnectorLogger extends \Monolog\Logger
 {
 }

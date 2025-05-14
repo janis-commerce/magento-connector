@@ -1,6 +1,6 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Plugin\Sales\Block\Adminhtml\Order;
+namespace JanisCommerce\JanisConnector\Plugin\Sales\Block\Adminhtml\Order;
 
 use Magento\Sales\Block\Adminhtml\Order\View as OrderView;
 

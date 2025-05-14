@@ -1,10 +1,10 @@
 <?php
 
-namespace JanisCommerce\MagentoConnector\Model\DataMappers\OrderCreationNotification;
+namespace JanisCommerce\JanisConnector\Model\DataMappers\OrderCreationNotification;
 
 
-use JanisCommerce\MagentoConnector\Helper\Data;
-use JanisCommerce\MagentoConnector\Model\DataMappers\AbstractAttributeMapper;
+use JanisCommerce\JanisConnector\Helper\Data;
+use JanisCommerce\JanisConnector\Model\DataMappers\AbstractAttributeMapper;
 
 class OrderNotification extends AbstractAttributeMapper
 {
