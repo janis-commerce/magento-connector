@@ -21,24 +21,24 @@ Compatibility:
 To install this module, just run the following command line:
 
 ```bash
-composer require janis-commerce/magento-connector
+composer require janis-commerce/janis-connector
 ```
 
-For more information about MagentoConnector via composer installation, follow us:
+For more information about JanisConnector via composer installation, follow us:
 
 ```bash
-https://packagist.org/packages/janis-commerce/magento-connector
+https://packagist.org/packages/janis-commerce/janis-connector
 ```
 
 ### Enable module
 
-Once MagentoConnector was installed, you need to enable the module. To do this, run the following next command lines over a magento project
+Once JanisConnector was installed, you need to enable the module. To do this, run the following next command lines over a magento project
 
 ```bash
 
     bin/magento cache:clean
 
-    bin/magento module:enable JanisCommerce_MagentoConnector
+    bin/magento module:enable JanisCommerce_JanisConnector
 
     bin/magento setup:upgrade
 
@@ -48,19 +48,19 @@ Once MagentoConnector was installed, you need to enable the module. To do this, 
 
 First at all, you have to localize the Backoffice Configurations Panel, then find out the "Stores" -> "Configuration", in left sidebar menu
 
-![Magento Backoffice Configuration](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_1.png)
+![Magento Backoffice Configuration](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_1.png)
 
 Click on "Janis Commerce" -> "Janis Connection"
 
-![Janis Connection](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_2.png)
+![Janis Connection](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_2.png)
 
 In this panel you'll find out the main Janis Connection configurations, to enable this module and allow it to communicate with Janis APIs.
 
-![Janis Connection expanded](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_3.png)
+![Janis Connection expanded](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_3.png)
 
 To use the new Janis API where the slaName attribute is used, the Janis endpoint to receive a split cart field must be like this.
 
-![Janis EndPoint](https://github.com/janis-commerce/magento-connector/src/master/blob/master/Blob/images/image_10.png)
+![Janis EndPoint](https://github.com/janis-commerce/janis-connector/src/master/blob/master/Blob/images/image_10.png)
 
 Here you can see 2 main sections:
 
@@ -143,7 +143,7 @@ https://<my_domain>/rest/default/V1/split-cart
 There are two format options to allow Client, to request information:
 
 #### 1) Client Body format to allow the module to use quote items to build request
-With this body format, MagentoConnector add all items located in the cart, and sent them to get the splitcart payload.
+With this body format, JanisConnector add all items located in the cart, and sent them to get the splitcart payload.
 
 ```bash
 {
@@ -170,7 +170,7 @@ Also it is possible to add custom products, including **"skus"** field as is sho
 }
 ```
 
-Internally with those types of client requests, MagentoConnector will build and send a body payload to a configurable Janis End Point, created with this format:
+Internally with those types of client requests, JanisConnector will build and send a body payload to a configurable Janis End Point, created with this format:
 
 ```bash
 {
@@ -425,18 +425,18 @@ Janis payload response:
 ```
 # Usage examples
 
-There is a wide variety of uses that could be given to the functionalities provided by MagentoConnector, among some we present:
+There is a wide variety of uses that could be given to the functionalities provided by JanisConnector, among some we present:
 
 ### 1) Splitcart
 A visual representation of the use of the splitcart would be the following:
 
 Once the products have been loaded into the minicart/basket, as normal
 
-![Splitcart example image 1](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_4.png)
+![Splitcart example image 1](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_4.png)
 
 When going to the next step and after having made the internal request to Janis, a cart with its respective subcarts would be shown
 
-![Splitcart example image 2](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_5.png)
+![Splitcart example image 2](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_5.png)
 
 To improve the handling of this feature, you could use a third-party module, such as Attribute Base SplitCart.
 
@@ -449,19 +449,19 @@ https://webkul.com/blog/magento2-cart-split-based-attribute/
 ### 2) Shipping methods available
 With the information obtained from Janis, it is possible for us to put together a shipping method selector according to a product in which the customer is interested in purchasing. Thus we provide more accurate information and also provide greater comfort to said client.
 
-![Shipping methods example](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_7.png)
+![Shipping methods example](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_7.png)
 
 ### 3) Availability according to proximity
 
 Using the customer's location as a reference, and the availability of the product they are looking at, it is possible to generate a map of nearby locations where they could purchase said product.
 
-![Availability according to proximity example](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_8.png)
+![Availability according to proximity example](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_8.png)
 
 ### 4) Shipping schedule and costs
 
 Another scenario in which you can take advantage of the benefits of this module is when it could be made available to the customer, with information about the available shipping dates and their costs. In this way, the client can select the one that best suits their budget and urgency of acquiring the product.
 
-![Shipping schedule and costs](https://github.com/janis-commerce/magento-connector/blob/master/Blob/images/image_9.png)
+![Shipping schedule and costs](https://github.com/janis-commerce/janis-connector/blob/master/Blob/images/image_9.png)
 
 # Not included in this module
 The Front End of Magento was not modified at all. This module only include the connection and the storage of the data retrieved from Janis Commerce.

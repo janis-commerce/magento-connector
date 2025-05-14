@@ -1,5 +1,5 @@
 {
-  "name": "janis-commerce/magento-connector",
+  "name": "janis-commerce/janis-connector",
   "description": "Janis Commerce connector for Magento 2",
   "type": "magento2-module",
   "license": [
@@ -9,7 +9,7 @@
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
-      "JanisCommerce\\MagentoConnector\\": ""
+      "JanisCommerce\\JanisConnector\\": ""
     }
   }
 }
